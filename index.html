@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/tex-gyre-heros" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/tex-gyre-heros?styles=826" rel="stylesheet">
+
+	<style type="text/css">
+@font-face {
+    font-family: 'Pretendard-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@import url('https://fonts.cdnfonts.com/css/tex-gyre-heros?styles=826');
+		html, body {
+			margin: 0;
+			padding: 0;
+			height: 100%; /* html과 body의 height를 100%로 설정 */
+		}
+		p{font-family: 'Pretendard-Medium'; line-height: 1.4;letter-spacing: 0.2px; width: 80%; position: relative;
+    z-index: 2; font-size: 1.5rem;}
+		h2{font-size: 6.0rem; color: red; margin-top: 10px; margin-left: 10px; font-family: 'TeXGyreHerosCondensed', sans-serif;}
+	body,h1,h3,p,ul,li{margin: 0px;padding: 0px}
+	body,h1,p{margin: 0;}
+    body{background: lightgray; word-break: keep-all; cursor: url('cursor.png'), auto;}
+    a:hover {
+            cursor: url('cursor_1.png'), pointer;}
+    h1{font-family: 'Roboto Mono', monospace; color: blue; font-size:7.5rem; text-align: center; border-bottom: 1.8px solid black; /* 밑줄 스타일 적용 */
+  padding-bottom: 12px; /* 밑줄과 텍스트 간격 조정 */}
+  nav {left: 0; width: 18%; bottom: 0; /* 화면의 위부터 아래까지 차지하도록 설정 */; background-color: lightgray; /* nav의 배경색을 body와 동일하게 설정 */ position: relative; border-right: 1.8px solid black; height: 100%;}
+  img{width: 40%;
+    z-index: 1;
+  }
+  .menu li a{text-decoration: none;color: black;list-style-type: none;font-family: 'TeXGyreHerosCondensed', sans-serif; font-style: normal; font-size: 1.1rem;}
+  .line{border-bottom: 1.8px solid black; /* 각 메뉴 항목에 밑줄 스타일 적용 */
+      padding: 10px; /* 밑줄과 텍스트 간격 조정 */
+  list-style-type: none;
+text-decoration: none;}
+ .line2{border-bottom: 1.8px solid black; /* 각 메뉴 항목에 밑줄 스타일 적용 */
+      padding-left: 10px; /* 밑줄과 텍스트 간격 조정 */
+  list-style-type: none;
+text-decoration: none; padding-bottom: 10px}
+.noline{padding-top: 10px; padding-bottom: 2px; padding-left: 10px;}
+.noline2{padding-bottom: 2px; padding-left: 10px;}
+.menu .neon-g{background: #00FF00}
+.menu .neon-y{background: #FFFF00}
+.nav-l{position: relative;}
+.line3{border-bottom: 1.8px solid black; /* 각 메뉴 항목에 밑줄 스타일 적용 */
+      padding-left: 10px; /* 밑줄과 텍스트 간격 조정 */
+  list-style-type: none;
+text-decoration: none; padding-bottom: 10px; padding-top: 70px;}
+.line4{border-bottom: 1.8px solid black; /* 각 메뉴 항목에 밑줄 스타일 적용 */
+      padding-left: 10px; /* 밑줄과 텍스트 간격 조정 */
+  list-style-type: none;
+text-decoration: none; padding-bottom: 10px; padding-top: 15px; padding-right: 10px;}
+  .container {
+    display: flex; height: 100vh;
+  }
+.pd{padding-top: 215px; }
+.menu .red-text {color: red;}
+.menu .underline-text {text-decoration: underline;}
+.underline-text {text-decoration: underline;}
+  section {flex-grow: 1; width: 82%; padding-left: 20px; overflow: auto;}
+ .m1{padding-bottom: 20px;}
+ .m2{padding-top: 40px;}
+  .m3{padding-top: 130px; padding-bottom: 30px}
+
+ .pd-l20{padding-left: 20px; padding-right: 20px;}
+ .pd-t{padding-top: 30px;}
+
+.image-container {
+  display: flex;
+  position: sticky;
+  top: 15%;
+  left: 70%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.image-container2 {
+  display: flex;
+  padding-top: 50px;
+  perspective: 700px;
+  padding-left: 30px;
+}
+
+/* 회전 애니메이션 정의 */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateY {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+/* 회전하는 이미지에 애니메이션 적용 */
+.rotating-image {
+  width: 35%; /* 원하는 이미지 크기로 조정 */
+  animation: rotate 5s linear infinite;
+}
+.rotating-image2 {
+  width: 40%; /* 원하는 이미지 크기로 조정 */
+   animation: rotateY 3s linear infinite;
+  transform-style: preserve-3d;
+}
+
+.clickable-text {
+  color: blue;
+  text-decoration: underline;
+  font-family: 'Pretendard-Medium'; line-height: 1.4;letter-spacing: 0.2px; width: 80%; position: relative;
+    z-index: 2; font-size: 1.5rem;
+}
+
+.clickable-text:hover {
+  color: red; /* 마우스를 올렸을 때 색상 변경 */
+}
+
+.hey{font-size: 4.0rem; color: red; margin-top: 10px; margin-left: 10px; width: 95%}
+
+.text-effect {background-color: white;
+      animation: fadeIn 2s ease-in-out; /* 애니메이션 효과 */
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+
+	</style>
+</head>
+<body>
+<h1><font color=#9D9D9D>Fake</font> Modern Art <font color=#9D9D9D>Archive</font></h1>
+<div class="container">
+<nav>
+	<ul class="menu">
+			<li class="line"><a>What is Modern Art</a></li>
+			<li class="noline"><a href="#bbb">Concept</a></li>
+			<li class="noline2"><a href="https://eun28.github.io/5.30-2/">Criticism</a></li>
+			<li class="noline2"><a class="underline-text" href="#ccc">Freedom</a></li>
+			<li class="line2"><a href="#ddd" class="red-text">Methodology</a></li>
+			<li class="line"><a>Do you want more?</a></li>
+			<li class="noline"><a class="neon-g underline-text" href="https://www.google.com/search?q=%ED%98%84%EB%8C%80%EB%AF%B8%EC%88%A0&oq=%ED%98%84%EB%8C%80%EB%AF%B8%EC%88%A0&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg7MgYIAhBFGD0yBggDEEUYPNIBBzk5NWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8" target="_blank">Google↗️</a></li>
+			<li class="line2"><a class="neon-y underline-text" href="https://namu.wiki/w/%ED%98%84%EB%8C%80%EB%AF%B8%EC%88%A0" target="_blank">Namu Wiki^^↗️</a></li>
+			<div class="line3"></div>
+			<li class="noline"><a>This website started as a skein of modern art-like visuals on Twitter.</a></li>
+			<li class="line4"><a>Ironic images on the Internet, which can become works of art just by attaching a concept to them, can either make you laugh or cause discomfort.</a></li>
+			<li class="noline"><a>Thanks to @gonsol95</a></li>
+			<div class="pd"></div>
+		</ul>
+</nav>
+<section class="nav-l">
+	<p class="m1 pd-l20 pd-t hey text-effect">작품의 제작 여부는 중요하지 않으며, 그것을 선택한 행위 자체에 초점을 맞춰야 한다. 일상의 평범한 사물이 ‘선택’됨으로써 그것의 본래 역할에서 벗어나 새로운 의미를 가지기 때문이다. ‘제작’이 아닌 ‘선택’만으로도 미술이 된다는 것은 기존의 미학적 가치의 근간을 흔들었다. 작품의 급을 매기는 것을 넘어 ‘예술이란 무엇인가’라는 예술 철학적 질문을 던졌다.</p>
+	<p class="pd-l20 pd-t"> "미술은 이제 ‘모방’의 테크닉을 벗어나 오로지 ‘선택’에 의해서 결정된다."<br>_ 마르셀 뒤샹 (Marcel Duchamp)</p>
+	<div class="image-container">
+	<img src="shh.png" alt="Rotating Image" class="rotating-image">
+</div>
+	<div class="image-container2">
+	<img src="earth.png" alt="Rotating Image" class="rotating-image2">
+</div>
+	<p class="m1 pd-l20 m2">예술 작품이 본질적인 가치와 미술적 특징을 가지려면 그 작품만의 새롭고 독특한 세계관을 지녀야한다. 그 세계관이란 현대미술에 있어 무질서하게 표출되고 있는 주제와 형식의 난해함 보다는 예술작품 내면의 진실함을 우선으로 한다. 또 관습이나 체계에 얽매어 사물을 보는 눈을 흐리게 하거나 습관적인 인식으로 대상의 참모습을 볼 수 없게 하던 과거의 어느 특정한 이미지나 강압적이었던 일루젼에서 벗어나 되도록 자연에 가깝게 사물을 직접적으로 보고 느낄 수 있는 열려진 세계의 관점을 말한다.</p>
+	<a href="https://m.riss.kr/search/detail/DetailView.do?p_mat_type=be54d9b8bc7cdb09&control_no=ef3ce39c770267bcffe0bdc3ef48d419" class="clickable-text pd-l20 pd-t ">현대미술에 나타난 시지각적 투명성에 관한 표현 방법론 연구 (2011, 정미란)</a>
+	<p class="m1 pd-l20 m3">현대미술의 가장 중요한 역할은 복잡다단하게 변해가는 이 시대의 모습을 동시적으로 반영해 우리의 인식을 늘 새롭게 하며 과거의 고정된 틀에서 벗어날 수 있도록 해준다. 과거 모더니즘 미술은 예술지상주의적 특성으로 인하여 시대의 담론을 반영하기 보다는 미술사적 미학적 테두리 안에서 전개되어 왔지만 현대미술은 이러한 틀에서 벗어나 우리가 실생활에서 접하는 모든 것들을 시각화시키고 이러한 요소들이 타 예술 장르에 근본적인 영향을 줌으로써 정신의 풍요로움과 삶의 의미를 찾게 해주는 역할을 하고 있는 것이다. :)</p>
+</section>
+</div>
+</body>
+</html>
